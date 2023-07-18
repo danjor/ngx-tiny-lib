@@ -12,7 +12,8 @@ import { LodashPipe } from './lodash.pipe';
   imports: [
   ],
   exports: [
-    NgxTinyLibComponent
+    NgxTinyLibComponent,
+    LodashPipe,
   ]
 })
 export class NgxTinyLibModule { }

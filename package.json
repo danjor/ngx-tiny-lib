@@ -1,0 +1,9 @@
+{
+  "volta": {
+    "node": "16.14.2",
+    "yarn": "1.22.17"
+  },
+  "devDependencies": {
+    "@angular/cli": "^16.1.4"
+  }
+}

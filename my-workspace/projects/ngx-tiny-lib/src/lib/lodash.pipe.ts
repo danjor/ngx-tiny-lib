@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import * as _ from 'lodash';
+import { isFunction } from "lodash";
 
 @Pipe({
   name: 'lodash'
@@ -8,9 +8,11 @@ export class LodashPipe implements PipeTransform {
 
   transform(value: any, lodashMemberName: any,...args: unknown[]): unknown {
     // @ts-ignore
-    const func = _[lodashMemberName];
+    // const func = _[lodashMemberName];
 
-    if (_.isFunction(func)) {
+    const func = (window as any)._[lodashMemberName];
+
+    if (isFunction(func)) {
       const arrayMutationMembers = [
         'fill',
         'pull',
